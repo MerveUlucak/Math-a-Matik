@@ -143,7 +143,12 @@ export default function App() {
         />,
       ]
     : null
-  const startButton = <StartButton clickHandler={() => setGameStarted(true)} />
+  const startButton = (
+    <StartButton
+      gameStarted={gameStarted}
+      clickHandler={() => setGameStarted(true)}
+    />
+  )
   function showStates() {
     const states = {
       mathProblem,
